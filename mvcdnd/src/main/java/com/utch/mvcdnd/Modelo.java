@@ -12,6 +12,7 @@ import java.util.*;
 public class Modelo {
     private int Type;
     private int dice; 
+    private List<Integer> history = new ArrayList<>();
     
     public void setType(int Type){
         this.Type = Type;
@@ -19,10 +20,11 @@ public class Modelo {
     public void setdice(int dice){
         this.dice = dice;
     }
-    public List<Integer> historial(int getRoll){
-        List<Integer> history = new ArrayList<Integer>();
+    public void sethistorial(int getRoll){
         history.add(getRoll);
-        return history;
+    }
+    public List<Integer> gethistorial(){
+        return this.history;
     }
     
     public int getRoll(){

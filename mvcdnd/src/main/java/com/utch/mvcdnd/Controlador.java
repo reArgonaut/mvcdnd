@@ -63,7 +63,7 @@ public class Controlador {
                     v.menu();
                     break;
                 case 9:
-                    v.historial();
+                    //v.historial(m.historial(res));
                     break;
             }
         }while(opcion!=9);

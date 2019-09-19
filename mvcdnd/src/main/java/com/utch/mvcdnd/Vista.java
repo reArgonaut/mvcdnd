@@ -5,6 +5,8 @@
  */
 package com.utch.mvcdnd;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 
@@ -22,7 +24,6 @@ public class Vista {
     
     
     public void menu(){
-        
         System.out.println("BIENVENIDO AVENTURERO!");
         System.out.println("");
         System.out.println("==========================");
@@ -51,8 +52,8 @@ public class Vista {
         return c;
     }
     
-    public void historial(){
-        System.out.println("Historial de Tiradas: ");
+    public void historial(List<Integer> lista){
+        System.out.println("Historial de Tiradas: "+lista);
         
     }
     

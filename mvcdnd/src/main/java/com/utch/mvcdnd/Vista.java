@@ -41,6 +41,8 @@ public class Vista {
         System.out.println("Elige la opcion a rolear");
     }
     
+    
+    //Regresara true si va a tirar mas de un dado del mismo tipo
     public int cDados(){
         Scanner leer = new Scanner(System.in);
         int c;

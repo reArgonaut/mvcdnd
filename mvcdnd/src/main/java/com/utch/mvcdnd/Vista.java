@@ -41,6 +41,23 @@ public class Vista {
         System.out.println("Elige la opcion a rolear");
     }
     
+    public void menazo(){
+        System.out.println("");
+        System.out.println("==========================");
+        System.out.println("=      1.- DICE d4       =");
+        System.out.println("=      2.- DICE d6       =");
+        System.out.println("=      3.- DICE d8       =");
+        System.out.println("=      4.- DICE d10      =");
+        System.out.println("=      5.- DICE d12      =");
+        System.out.println("=      6.- DICE d100     =");
+        System.out.println("=      7.- DICE d20      =");
+        System.out.println("=      8.- SALIR         =");
+        System.out.println("==========================");
+        System.out.println("");
+        System.out.println("Que dados vas a tirar?");
+        
+    }
+    
     
     //Regresara true si va a tirar mas de un dado del mismo tipo
     public int cDados(){

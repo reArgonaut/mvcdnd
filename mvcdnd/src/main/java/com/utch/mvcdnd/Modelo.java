@@ -28,9 +28,9 @@ public class Modelo {
     }
     
     public int getRoll(){
-        int max = dice*Type; 
-        int min = dice; 
-        int range = max - min + 1; 
+        int max = this.dice*this.Type; 
+        int min = this.dice; 
+        int range = (max - min) + 1; 
         return (int)(Math.random() * range) + min; 
   
     }

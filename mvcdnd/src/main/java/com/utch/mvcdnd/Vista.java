@@ -34,12 +34,15 @@ public class Vista {
         System.out.println("=      6.- DICE d100     =");
         System.out.println("=      7.- DICE d20      =");
         System.out.println("=    8.- Varios Dados    =");
-        System.out.println("=       9.- SALIR        =");
+        System.out.println("=      9.- Historial     =");
+        System.out.println("=      10.- SALIR        =");
         System.out.println("==========================");
         System.out.println("");
         System.out.println("Elige la opcion a rolear");
     }
     
+    
+    //Regresara true si va a tirar mas de un dado del mismo tipo
     public int cDados(){
         Scanner leer = new Scanner(System.in);
         int c;

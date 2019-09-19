@@ -72,6 +72,7 @@ public class Controlador {
                     break;
                 // Varios tipos
                 case 8:
+                    //Desplegar menu
                     v.menu();
                     break;
                 case 9:

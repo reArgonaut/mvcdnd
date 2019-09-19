@@ -20,53 +20,67 @@ public class Controlador {
         init();
     }
     
-    public void init(){
-        v.menu();
-        
+    public void init(){       
         int opcion;
+        int res;
         
         do{
+            v.menu();
             opcion = leerEntero();
             switch(opcion){
                 // d4
                 case 1:
-                    int res = repetirOp(v.cDados(), 4, m);
-                    m.historial(res);
+                    res = repetirOp(v.cDados(), 4, m);
+                    m.sethistorial(res);
                     v.resDado(res);
                     break;
                 // d6
                 case 2:
-                    v.resDado(repetirOp(v.cDados(), 6, m));
+                    res = repetirOp(v.cDados(), 6, m);
+                    m.sethistorial(res);
+                    v.resDado(res);
                     break;
                 // d8
                 case 3:
-                    v.resDado(repetirOp(v.cDados(), 8, m));
+                    res = repetirOp(v.cDados(), 8, m);
+                    m.sethistorial(res);
+                    v.resDado(res);
                     break;
                 // d10
                 case 4:
-                    v.resDado(repetirOp(v.cDados(), 10, m));
+                    res = repetirOp(v.cDados(), 10, m);
+                    m.sethistorial(res);
+                    v.resDado(res);
                     break;
                 // d12
                 case 5:
-                    v.resDado(repetirOp(v.cDados(), 12, m));
+                    res = repetirOp(v.cDados(), 12, m);
+                    m.sethistorial(res);
+                    v.resDado(res);
                     break;
                 // d100
                 case 6:
-                    v.resDado(repetirOp(v.cDados(), 100, m));
+                    res = repetirOp(v.cDados(), 100, m);
+                    m.sethistorial(res);
+                    v.resDado(res);
                     break;
                 // d20
                 case 7:
-                    v.resDado(repetirOp(v.cDados(), 20, m));
+                    res = repetirOp(v.cDados(), 20, m);
+                    m.sethistorial(res);
+                    v.resDado(res);
                     break;
                 // Varios tipos
                 case 8:
                     v.menu();
                     break;
                 case 9:
-                    //v.historial(m.historial(res));
+                    v.historial(m.gethistorial());
+                    break;
+                case 10:
                     break;
             }
-        }while(opcion!=9);
+        }while(opcion!=10);
         
     }
     

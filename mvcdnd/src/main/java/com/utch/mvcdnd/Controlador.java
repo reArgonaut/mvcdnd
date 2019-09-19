@@ -1,7 +1,7 @@
 package com.utch.mvcdnd;
 
 import Vista;
-import Modelo;
+import com.utch.mvcdnd.Modelo;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 

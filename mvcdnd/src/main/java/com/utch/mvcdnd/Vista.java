@@ -52,7 +52,6 @@ public class Vista {
         System.out.println("=      5.- DICE d12      =");
         System.out.println("=      6.- DICE d100     =");
         System.out.println("=      7.- DICE d20      =");
-        System.out.println("=      8.- SALIR         =");
         System.out.println("==========================");
         System.out.println("");
         System.out.println("Que dados vas a tirar?");
@@ -64,7 +63,19 @@ public class Vista {
     public int cDados(){
         Scanner leer = new Scanner(System.in);
         int c;
-        System.out.println("Cuantos dados vas a tirar?");
+        System.out.println("Cuantos dados de ese tipo vas a tirar?");
+        c=leer.nextInt();
+        return c;
+    }
+    
+    public void cual(){
+        System.out.println("¿Cual dado vas a tirar primero?");
+    }
+    
+    public int cTDados(){
+        Scanner leer = new Scanner(System.in);
+        int c;
+        System.out.println("Cuantos tipos de dados vas a tirar?");
         c=leer.nextInt();
         return c;
     }

@@ -13,6 +13,7 @@ public class Modelo {
     private int Type;
     private int dice; 
     private List<Integer> history = new ArrayList<>();
+    private int[] dices, allDices = {4,6,8,10,12,100,20};
     
     public void setType(int Type){
         this.Type = Type;
@@ -23,6 +24,24 @@ public class Modelo {
     public void sethistorial(int getRoll){
         history.add(getRoll);
     }
+    
+    public int[] getAllDices(){
+        return this.allDices;
+    }
+    
+    //Tipos de dado
+    public void initDices(int dice){
+        dices = new int[dice];
+    }
+    
+    public void setDices(int index,int dice){
+        dices[index] = dice;
+    }
+    
+    public int[] getDices(){
+        return this.dices;
+    }
+    
     public List<Integer> gethistorial(){
         return this.history;
     }

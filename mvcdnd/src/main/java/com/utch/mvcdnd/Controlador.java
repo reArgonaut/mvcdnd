@@ -73,7 +73,12 @@ public class Controlador {
                 // Varios tipos
                 case 8:
                     //Desplegar menu
-                    v.menu();
+                    int tipos = v.cTDados();
+                    v.menazo();
+                    seleccionarVariosTipos(tipos,v,m);
+                    int rs = rollearVarios(v, m);
+                    m.sethistorial(rs);
+                    v.resDado(rs);
                     break;
                 case 9:
                     v.historial(m.gethistorial());
@@ -94,6 +99,26 @@ public class Controlador {
             e.printStackTrace();
         }
         return n;
+    }
+    
+    public void seleccionarVariosTipos(int tipos, Vista v, Modelo m){
+        int total;
+        m.initDices(tipos);
+        for(int i=0; i<tipos; i++){ //Ciclar los tipos de dados
+            int tipo = leerEntero();
+            m.setDices(i, m.getAllDices()[tipo-1]);   
+        }
+    }
+    
+    public int rollearVarios(Vista v,Modelo m){
+        int acum=0, cuantos = 0;
+        for(int i=0;i<m.getDices().length; i++){
+            System.out.println("Dado: "+m.getDices()[i]);
+            v.cDados();
+            cuantos = leerEntero();
+            acum += repetirOp(cuantos,m.getDices()[i],m);
+        }
+        return acum;
     }
     
     public int repetirOp(int repes, int tipo, Modelo m){
